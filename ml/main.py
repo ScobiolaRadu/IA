@@ -73,11 +73,13 @@ model = tf.keras.Sequential([
     layers.Conv2D(128, (3, 3), activation='relu'),
     layers.MaxPooling2D((2, 2)),
     layers.Flatten(),
+    layers.Dense(256, activation='relu'),
     layers.Dense(128, activation='relu'),
+    layers.Dense(64, activation='relu'),
     layers.Dense(1, activation='sigmoid')
 ])
 
-optimizer = tf.keras.optimizers.Adam(learning_rate=0.001)
+optimizer = tf.keras.optimizers.Adam(learning_rate=0.0005)
 
 model.compile(optimizer=optimizer,
               loss='binary_crossentropy',
@@ -85,7 +87,7 @@ model.compile(optimizer=optimizer,
 
 history = model.fit(train_generator,
                     steps_per_epoch=train_generator.samples//train_generator.batch_size,
-                    epochs=2,
+                    epochs=10,
                     validation_data=val_generator,
                     validation_steps=val_generator.samples//val_generator.batch_size,
                     class_weight=class_weights_dict,)
