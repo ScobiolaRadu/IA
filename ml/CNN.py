@@ -43,7 +43,6 @@ train_generator = train_datagen.flow_from_dataframe(
     target_size=(224, 224),
     batch_size=32,
     class_mode="binary",
-    #sample_weight=class_weights_dict[train_labels['class'].values]
     )
 
 val_generator = val_datagen.flow_from_dataframe(
