@@ -23,7 +23,7 @@ for i in range(15001, 17001):
 train_images = np.array(train_images)
 val_images = np.array(val_images)
 
-clf = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=0)
+clf = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=3)
 clf.fit(train_images, train_labels['class'])
 
 val_pred = clf.predict(val_images)
