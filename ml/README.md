@@ -12,8 +12,12 @@ CNN:
 9. 10 epochs, batch size 32, learning rate 0.0005, added layer 512 -> succesful, score 0.5062
 
 Random Forests:
-1. random state 0 -> validation f1 score: 0.681246874295858
-2. random state 1 -> validation f1 score: 0.6831808641241931
-3. random state 2 -> validation f1 score: 0.6986317883189681
-4. random state 3 -> validation f1 score: 0.70098177650049
-5. random state 4 -> validation f1 score: 0.6942491721303189
+1. Random state 0, max depth 10, 100 estimators -> f1 score: 0.6812
+2. Random state 1, max depth 10, 100 estimators -> f1 score: 0.6831
+3. Random state 2, max depth 10, 100 estimators -> f1 score: 0.6986
+4. Random state 3, max depth 10, 100 estimators -> f1 score: 0.7009
+5. Random state 4, max depth 10, 100 estimators -> f1 score: 0.6942
+6. Random state 5, max depth 10, 100 estimators -> f1 score: 0.6993
+7. Random state 6, max depth 10, 100 estimators -> f1 score: 0.6751
+8. Random state 3, max depth 10, 120 estimators -> f1 score: 0.6996
+9. Random state 3, max depth 15, 100 estimators -> f1 score: 0.6807
